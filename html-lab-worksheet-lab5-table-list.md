@@ -100,7 +100,36 @@
 ```html
 
 ```
-- ภาพผลลัพธ์:
-[![image](https://github.com/user-attachments/assets/a716cdb8-67e8-497a-8352-00ba2578bd0a)
+- <table border="1">
+    <thead>
+        <tr>
+            <th>ข้อมูล</th>
+            <th>ผลลัพธ์</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>อายุ</td>
+            <td>ส่วนสูง</td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>157</td>
+        </tr>
+    </tbody>
+
+</table>
+<ul>
+    <li>เมนูไข่</li>
+</ul>
+
+<ol>
+    <li>ไข่ต้ม</li>
+    <li>ไข่ดาว</li>
+    <li>ไข่เจียว</li>
+    <li>ไข่ตุ๋น</li>
+    <li>ไข่ข้น</li>
+</ol>
+
 ]
 
