@@ -165,10 +165,98 @@
 ### บันทึกผลการทดลอง
 - รหัสเอกสาร HTML ที่เขียน:
 ```html
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>หน้าหลัก</title>
+</head>
+<body>
+    <!-- ส่วนของเนื้อหา -->
+</body>
+</html>
+<nav>
+    <!-- ลิงก์ภายใน - ไปยังหน้าในเว็บไซต์เดียวกัน -->
+    <a href="index.html">หน้าหลัก</a>
+    <a href="pages/about.html">เกี่ยวกับเรา</a>
+    <a href="pages/contact.html">ติดต่อเรา</a>
+    
+    <!-- ลิงก์ภายนอก - เปิดในแท็บใหม่ -->
+    <a href="https://www.google.com" target="_blank">
+        ไปยัง Google
+    </a>
+</nav>
+<!-- สร้างจุดเชื่อมโยง -->
+<section id="top">
+    <h1>เนื้อหาส่วนบน</h1>
+</section>
+
+<section id="products">
+    <h2>สินค้าของเรา</h2>
+</section>
+
+<!-- ลิงก์ไปยังจุดเชื่อมโยง -->
+<a href="#top">กลับด้านบน</a>
+<a href="#products">ไปยังสินค้า</a>
+<!-- ลิงก์อีเมล -->
+<a href="mailto:contact@example.com">ส่งอีเมลหาเรา</a>
+
+<!-- ลิงก์โทรศัพท์ -->
+<a href="tel:+66812345678">โทร 081-234-5678</a>
+
+<!-- ลิงก์ดาวน์โหลด -->
+<a href="files/document.pdf" download>
+    ดาวน์โหลดเอกสาร
+</a>
+<br><br> <!-- เว้นบรรทัด -->
+
+<a href="gallery/Screenshot 2025-02-03 153224.png">
+    <img src="gallery/Screenshot 2025-02-03 153224.png" 
+         alt="คลิกเพื่อดูรูปขนาดใหญ่"
+         width="200">
+</a>
+
+<!-- รูปภาพในโฟลเดอร์ย่อย products -->
+<p>น้อนจิ้งจอกกก</p>
+<br><br> <!-- เว้นบรรทัด -->
+
+<a href="gallery/Screenshot 2025-02-03 152904.png">
+    <img src="gallery/Screenshot 2025-02-03 152904.png" 
+         alt="คลิกเพื่อดูรูปขนาดใหญ่"
+         width="200">
+</a>
+
+<!-- รูปภาพในโฟลเดอร์ย่อย products -->
+<p>น้อนเหมี๊ยว</p>
+<br><br> <!-- เว้นบรรทัด -->
+
+<a href="gallery/Screenshot 2025-02-03 152910.png">
+    <img src="gallery/Screenshot 2025-02-03 152910.png" 
+         alt="คลิกเพื่อดูรูปขนาดใหญ่"
+         width="200">
+</a>
+
+<!-- รูปภาพในโฟลเดอร์ย่อย products -->
+<p>น้อนเหมี๊ยวในแก้วว</p>
+<br><br> <!-- เว้นบรรทัด -->
+
+<a href="gallery/Screenshot 2025-02-03 152915.png">
+    <img src="gallery/Screenshot 2025-02-03 152915.png" 
+         alt="คลิกเพื่อดูรูปขนาดใหญ่"
+         width="200">
+</a>
+
+<!-- รูปภาพในโฟลเดอร์ย่อย products -->
+<p>น้อนเหมี๊ยวนอนทับกันตะมัยย</p>
+<br><br> <!-- เว้นบรรทัด -->
+
+
+
+]
 ```
 - ภาพผลลัพธ์:
-[วางภาพ screenshot ที่นี่]
+[![image](https://github.com/user-attachments/assets/6ff6b93b-9bff-4933-acf8-52adb152942f)
+]
 
 
 
