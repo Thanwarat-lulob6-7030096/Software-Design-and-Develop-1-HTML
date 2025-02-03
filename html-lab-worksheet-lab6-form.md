@@ -222,12 +222,137 @@
    - ตรวจสอบขนาดไฟล์รูปภาพ
 
 ### บันทึกผลการทดลอง
-[วางโค้ด HTML ที่นี่]
+[<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สมัครสมาชิก</title>
+    <style>
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .input-wrapper {
+            display: flex;
+            align-items: center;
+        }
+        .required-mark {
+            color: red;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form action="/register" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
+        <fieldset>
+            <legend>ข้อมูลส่วนตัว</legend>
+            <div class="form-group">
+                <label for="fullname">ชื่อ-นามสกุล:</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+            <div class="form-group">
+                <label for="birthdate">วันเกิด:</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+            </div>
+            <div class="form-group">
+                <label>เพศ:</label>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">ชาย</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">หญิง</label>
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>ข้อมูลการติดต่อ</legend>
+            <div class="form-group">
+                <label for="email">อีเมล:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">เบอร์โทรศัพท์:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+            </div>
+            <div class="form-group">
+                <label for="address">ที่อยู่จัดส่ง:</label>
+                <textarea id="address" name="address" rows="3" required></textarea>
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>อัพโหลดรูปโปรไฟล์</legend>
+            <div class="form-group">
+                <label for="photo">รูปโปรไฟล์:</label>
+                <input type="file" id="photo" name="photo" accept="image/*" required>
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>รหัสผ่าน</legend>
+            <div class="form-group">
+                <label for="password">รหัสผ่าน:</label>
+                <input type="password" id="password" name="password" minlength="6" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm_password">ยืนยันรหัสผ่าน:</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>ความสนใจในหมวดหมู่สินค้า</legend>
+            <div class="form-group">
+                <input type="checkbox" id="electronics" name="interests" value="electronics">
+                <label for="electronics">อิเล็กทรอนิกส์</label>
+                <input type="checkbox" id="fashion" name="interests" value="fashion">
+                <label for="fashion">แฟชั่น</label>
+                <input type="checkbox" id="beauty" name="interests" value="beauty">
+                <label for="beauty">ความงาม</label>
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend>การยอมรับเงื่อนไข</legend>
+            <div class="form-group">
+                <input type="checkbox" id="agree" name="agree" required>
+                <label for="agree">ฉันยอมรับเงื่อนไขการใช้งาน</label>
+            </div>
+        </fieldset>
+        
+        <div class="form-group">
+            <button type="submit">สมัครสมาชิก</button>
+            <button type="reset">ล้างข้อมูล</button>
+        </div>
+    </form>
+
+    <script>
+        function validateForm() {
+            let password = document.getElementById("password").value;
+            let confirmPassword = document.getElementById("confirm_password").value;
+            let file = document.getElementById("photo").files[0];
+            
+            if (password !== confirmPassword) {
+                alert("รหัสผ่านไม่ตรงกัน");
+                return false;
+            }
+            
+            if (file && file.size > 2 * 1024 * 1024) { // 2MB limit
+                alert("ขนาดไฟล์รูปภาพต้องไม่เกิน 2MB");
+                return false;
+            }
+            
+            return true;
+        }
+    </script>
+</body>
+</html>
+]
 ```html
 
 ```
 - ภาพผลลัพธ์:
-[วางภาพ screenshot ที่นี่]
+[![image](https://github.com/user-attachments/assets/840035b6-17a0-434d-8868-baeefd590eaf)
+]
 
 
 
